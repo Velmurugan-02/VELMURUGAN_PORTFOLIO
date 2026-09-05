@@ -753,6 +753,37 @@ a.contact-item:hover .contact-value {
   color: var(--accent);
 }
 
+/* Footer */
+.footer {
+  background: var(--footer-background);
+  color: var(--footer-text);
+}
+
+.footer-container {
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -1000,6 +1031,18 @@ a.contact-item:hover .contact-value {
 
   .contact-item {
     min-height: 85px;
+  }
+
+  /* Footer */
+  .footer-container {
+    min-height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-links {
+    gap: 20px;
   }
 
 }
