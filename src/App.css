@@ -500,6 +500,110 @@
   color: var(--accent);
 }
 
+/* Experiance */
+.experience {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.experience-heading {
+  margin-bottom: 60px;
+}
+
+.experience-heading h2 {
+  color: var(--text-primary);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* EXP Item */
+.experience-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+/* Exp date */
+.experience-date {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.experience-date span {
+  white-space: nowrap;
+}
+
+/* Content */
+.experience-content {
+  max-width: 750px;
+}
+
+.experience-content h3 {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.experience-company {
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.experience-description {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.experience-responsibilities {
+  margin: 0 0 28px;
+  padding-left: 20px;
+
+  color: var(--text-secondary);
+}
+
+.experience-responsibilities li {
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.experience-responsibilities li::marker {
+  color: var(--accent);
+}
+
+/* Exp Tech */
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience-technologies span {
+  padding: 7px 11px;
+  color: var(--accent);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .desktop-nav {
@@ -672,6 +776,34 @@
 
   .project-links {
     gap: 20px;
+  }
+
+  /* Experience section */
+  .experience {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .experience-heading {
+    margin-bottom: 40px;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .experience-content h3 {
+    font-size: 26px;
+  }
+
+  .experience-date {
+    font-size: 13px;
   }
 
 }

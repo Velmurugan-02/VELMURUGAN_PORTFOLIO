@@ -56,7 +56,7 @@ function Projects() {
             title: "Medicine Expiry & Donation Tracker",
             description:
                 "Medicines worth crores expire unused in households and pharmacies every year while NGOs and free clinics struggle to source affordable medicines. This platform bridges that gap — connecting donors with receivers before medicines expire.",
-            image: "assets/CineScope.png",
+            image: "assets/MedicineTracker.png",
             technologies: [
                 "Java",
                 "Spring Boot",
@@ -152,11 +152,8 @@ function Projects() {
                                     >
                                         Live Demo ↗
                                     </a>
-
                                 </div>
-
                             </div>
-
                         </article>
                     ))}
 
