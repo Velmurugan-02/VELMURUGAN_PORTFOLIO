@@ -1,0 +1,39 @@
+Color :
+Background
+#F5F1EA
+
+Primary text
+#2C2A28
+
+Secondary text
+#706B65
+
+Accent
+#176653 / #1D6757
+
+Cards
+#FFFFFF
+
+Borders
+#E2DCD2
+
+Text 
+Inter
+Manrope
+DM Sans
+
+BODY
+#F5F1EA
+      │
+      ├── Hero       #F5F1EA
+      ├── About      #F5F1EA
+      ├── Skills     #F5F1EA
+      ├── Projects   #F5F1EA
+      ├── Experience #F5F1EA
+      ├── Education  #F5F1EA
+      └── Contact    #F5F1EA
+                         │
+                         └── Cards → #FFFFFF
+
+Footer
+#2C2A28
