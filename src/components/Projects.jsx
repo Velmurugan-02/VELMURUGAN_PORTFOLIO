@@ -28,7 +28,7 @@ function Projects() {
             title: "IdeaForge",
             description:
                 "A startup idea protection and validation platform where users can post ideas, get community validation through real-time voting, detect duplicate ideas using AI-free similarity algorithms, protect ownership with cryptographic hashing, and compete in live 24-hour idea battles.",
-            image: "assets/CineScope.png",
+            image: "assets/IdeaForge.png",
             technologies: [
                 "React",
                 "JavaScript",

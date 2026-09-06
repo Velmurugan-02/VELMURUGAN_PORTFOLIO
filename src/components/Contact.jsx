@@ -72,11 +72,11 @@ function Contact() {
 
                         <div className="contact-item">
                             <span className="contact-label">
-                                Location
+                                Phone
                             </span>
 
                             <span className="contact-value">
-                                India
+                                6381500264
                             </span>
                         </div>
 

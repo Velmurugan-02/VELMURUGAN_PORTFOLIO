@@ -60,7 +60,7 @@
 
 /* Hero Section */
 .hero {
-  height: calc(100vh-76px);
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
 }
@@ -88,15 +88,42 @@
 .hero h1 {
   margin-bottom: 28px;
   color: var(--text-primary);
-  font-size: clamp(42px, 5vw, 64px);
-  line-height: 1.1;
+  font-size: clamp(32px, 5.2vw, 62px);
+  line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.03em;
+}
+
+.hero-typed-wrapper {
+  display: inline-flex;
+  align-items: baseline;
   white-space: nowrap;
 }
 
-.hero h1 span {
+.hero-typed-text {
   color: var(--accent);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.88em;
+  margin-left: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  vertical-align: -0.04em;
+  animation: blink 0.85s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Description */
@@ -221,17 +248,7 @@
   font-size: 12px;
 }
 
-.typing-cursor {
-  color: var(--accent);
-  font-weight: 400;
-  animation: blink 0.8s infinite;
-}
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 
 /* About Section */
 .about {
@@ -859,6 +876,10 @@ a.contact-item:hover .contact-value {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -895,21 +916,25 @@ a.contact-item:hover .contact-value {
 
   /* Hero Section */
   .hero {
-    min-height: calc(100vh - 76px);
+    min-height: auto;
+    display: block;
+    padding: 30px 0 60px;
   }
 
   .hero-content {
-    padding: 80px 0;
+    padding: 20px 0 10px;
   }
 
   .hero-label {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-size: 12px;
   }
 
   .hero h1 {
-    margin-bottom: 22px;
-    font-size: clamp(42px, 12vw, 60px);
+    margin-bottom: 20px;
+    font-size: clamp(28px, 7.2vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .hero-description {
@@ -1127,4 +1152,16 @@ a.contact-item:hover .contact-value {
     gap: 20px;
   }
 
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: clamp(22px, 6.8vw, 29px);
+    line-height: 1.22;
+  }
+
+  .typing-cursor {
+    width: 2.5px;
+    margin-left: 3px;
+  }
 }
