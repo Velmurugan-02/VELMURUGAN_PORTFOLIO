@@ -49,7 +49,7 @@ function Projects() {
             ],
 
             github: "https://github.com/Velmurugan-02/IDEAFORGE",
-            live: "#",
+            live: "https://github.com/Velmurugan-02/IDEAFORGE",
         },
 
         {
@@ -72,8 +72,8 @@ function Projects() {
                 "Location-based search",
             ],
 
-            github: "#",
-            live: "#",
+            github: "https://github.com/Velmurugan-02/MedicineTracker",
+            live: "https://github.com/Velmurugan-02/MedicineTracker",
         },
     ];
 
