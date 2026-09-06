@@ -7,26 +7,25 @@ function Hero() {
     const word = "Velmurugan";
 
     useEffect(() => {
-        let timer;
+        const typingSpeed = isDeleting ? 100 : 180;
 
-        if (!isDeleting && text === word) {
-            timer = setTimeout(() => {
-                setIsDeleting(true);
-            }, 1600);
-        } else if (isDeleting && text === "") {
-            timer = setTimeout(() => {
-                setIsDeleting(false);
-            }, 500);
-        } else {
-            const typingSpeed = isDeleting ? 70 : 130;
-            timer = setTimeout(() => {
-                setText((prev) =>
-                    isDeleting
-                        ? word.substring(0, prev.length - 1)
-                        : word.substring(0, prev.length + 1)
-                );
-            }, typingSpeed);
-        }
+        const timer = setTimeout(() => {
+            if (!isDeleting) {
+                setText(word.substring(0, text.length + 1));
+
+                if (text === word) {
+                    setTimeout(() => {
+                        setIsDeleting(true);
+                    }, 1200);
+                }
+            } else {
+                setText(word.substring(0, text.length - 1));
+
+                if (text === "") {
+                    setIsDeleting(false);
+                }
+            }
+        }, typingSpeed);
 
         return () => clearTimeout(timer);
     }, [text, isDeleting]);
@@ -42,11 +41,8 @@ function Hero() {
                     </p>
 
                     <h1>
-                        Hi, I'm{" "}
-                        <span className="hero-typed-wrapper">
-                            <span className="hero-typed-text">{text}</span>
-                            <span className="typing-cursor" aria-hidden="true"></span>
-                        </span>
+                        Hi, I'm <span>{text}</span>
+                        <span className="typing-cursor"></span>
                     </h1>
 
                     <p className="hero-description">
