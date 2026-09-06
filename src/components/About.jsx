@@ -34,7 +34,7 @@ function About() {
 
                             <div className="info-item">
                                 <span>Location</span>
-                                <strong>India</strong>
+                                <strong>Tirunelveli</strong>
                             </div>
 
                         </div>
